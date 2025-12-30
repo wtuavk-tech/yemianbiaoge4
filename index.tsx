@@ -239,7 +239,7 @@ const NotificationBar = () => (
     </div>
 
     {/* Right Date */}
-    <div className="shrink-0 text-[13px] text-slate-400 bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-md font-mono">
+    <div className="shrink-0 text-[13px] text-slate-400 bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-md">
       2025-11-19
     </div>
     
