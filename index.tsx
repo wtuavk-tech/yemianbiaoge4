@@ -329,7 +329,7 @@ const DataOverview = ({ activeTab, onToggleFilter, isFilterOpen, onAdd }: { acti
           {data.map(([label, val, color]) => (
             <div key={label} className={`flex flex-row items-center ${isWorkDaily ? 'gap-1.5' : 'gap-3'} whitespace-nowrap`}>
               <span className={`${isWorkDaily ? 'text-[11px]' : 'text-[13px]'} text-slate-500 font-medium`}>{label}</span>
-              <span className={`${isWorkDaily ? 'text-[16px]' : 'text-[22px]'} font-bold font-sans leading-none tracking-tight`} style={{ color }}>{val}</span>
+              <span className={`${isWorkDaily ? 'text-[16px]' : 'text-[22px]'} font-bold leading-none tracking-tight`} style={{ color }}>{val}</span>
             </div>
           ))}
         </div>
@@ -601,7 +601,7 @@ const App = () => {
       {/* Table Section */}
       <div className="bg-white border border-slate-200 rounded-xl shadow-sm flex-1 overflow-hidden flex flex-col min-h-0">
          <div className="overflow-auto flex-1 custom-scrollbar">
-            <table className="w-full text-center border-collapse font-source">
+            <table className="w-full text-center border-collapse">
                <thead className="sticky top-0 z-10 shadow-sm">
                   <tr>
                     {config.headers.map((h, i) => (

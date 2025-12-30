@@ -12,13 +12,11 @@
     <script>
       tailwind.config = {
         theme: {
-          extend: {
-            fontFamily: {
-              // Set Source Han Sans as the default sans font
-              sans: ['"Source Han Sans CN"', '"Noto Sans SC"', 'sans-serif'],
-              // Keep source definition for compatibility
-              source: ['"Source Han Sans CN"', '"Noto Sans SC"', 'sans-serif'],
-            }
+          // Directly override fontFamily to ensure no default fonts take precedence
+          fontFamily: {
+            sans: ['"Source Han Sans CN"', '"Source Han Sans SC"', '"Noto Sans SC"', '"Microsoft YaHei"', 'sans-serif'],
+            serif: ['"Source Han Sans CN"', '"Source Han Sans SC"', '"Noto Sans SC"', '"Microsoft YaHei"', 'serif'],
+            mono: ['"Source Han Sans CN"', '"Source Han Sans SC"', '"Noto Sans SC"', '"Microsoft YaHei"', 'monospace'], // Force mono to use this too if needed, or keep standard mono
           }
         }
       }
@@ -39,9 +37,10 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #a8a8a8;
       }
-      /* Ensure font is applied to body and all form elements which might not inherit by default */
-      body, input, textarea, select, button {
-        font-family: "Source Han Sans CN", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      
+      /* Global font enforcement */
+      * {
+        font-family: "Source Han Sans CN", "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei", sans-serif !important;
       }
     </style>
   <script type="importmap">
