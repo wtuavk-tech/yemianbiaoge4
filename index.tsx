@@ -649,7 +649,7 @@ const App = () => {
          </div>
          
          {/* Pagination */}
-         <div className="flex items-center justify-between px-6 py-3 border-t border-slate-200 bg-slate-50 text-[13px] text-slate-500">
+         <div className="flex items-center justify-center gap-8 px-6 py-3 border-t border-slate-200 bg-slate-50 text-[13px] text-slate-500">
             <span>共 400 条记录</span>
             <div className="flex items-center gap-2">
                <button className="w-7 h-7 flex items-center justify-center border border-slate-200 rounded bg-white hover:border-blue-400 hover:text-blue-500 transition-all disabled:opacity-50"><ChevronLeft size={14} /></button>
